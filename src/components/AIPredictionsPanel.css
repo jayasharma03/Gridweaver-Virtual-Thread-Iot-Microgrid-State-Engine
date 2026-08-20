@@ -1,0 +1,338 @@
+.ai-predictions-panel {
+  background: rgba(26, 26, 46, 0.95);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 16px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.ai-status-badge {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ai-status-badge.active {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.ai-status-badge.inactive {
+  background: rgba(255, 193, 7, 0.2);
+  color: #FFC107;
+  border: 1px solid rgba(255, 193, 7, 0.5);
+}
+
+.ai-unavailable {
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 16px;
+  color: #FFC107;
+  font-size: 14px;
+}
+
+.ai-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Forecast Chart */
+.forecast-chart {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.forecast-chart h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #4CAF50;
+}
+
+.chart-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 100px;
+  margin-bottom: 8px;
+}
+
+.chart-bar {
+  flex: 1;
+  background: #4CAF50;
+  border-radius: 2px 2px 0 0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.chart-bar:hover {
+  opacity: 0.8;
+  transform: scaleY(1.05);
+}
+
+.chart-legend {
+  display: flex;
+  gap: 12px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+/* Anomaly Status */
+.anomaly-status {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 12px;
+  border-left: 3px solid;
+}
+
+.anomaly-status.normal {
+  border-left-color: #4CAF50;
+}
+
+.anomaly-status.anomaly-detected {
+  border-left-color: #F44336;
+}
+
+.anomaly-status h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.indicator {
+  font-size: 18px;
+}
+
+.indicator.ok {
+  color: #4CAF50;
+}
+
+.indicator.warning {
+  color: #F44336;
+}
+
+.status-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.anomaly-details {
+  background: rgba(244, 67, 54, 0.1);
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.anomaly-details p {
+  margin: 4px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Performance Metrics */
+.performance-metrics {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.performance-metrics h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #2196F3;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+}
+
+.metric-label {
+  display: block;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+}
+
+.metric-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.metric-value.status-good {
+  color: #4CAF50;
+}
+
+.metric-value.status-degraded {
+  color: #FFC107;
+}
+
+.metric-value.status-poor {
+  color: #F44336;
+}
+
+/* Battery Optimization */
+.battery-optimization {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.battery-optimization h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #9C27B0;
+}
+
+.battery-status {
+  margin-bottom: 12px;
+}
+
+.soc-display {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.soc-label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.soc-value {
+  font-weight: 600;
+  color: #9C27B0;
+}
+
+.soc-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.soc-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #9C27B0, #E91E63);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.optimization-recommendation {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.optimization-recommendation p {
+  margin: 4px 0;
+}
+
+.optimization-recommendation strong {
+  color: #9C27B0;
+}
+
+/* Footer */
+.ai-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.refresh-btn {
+  background: rgba(33, 150, 243, 0.2);
+  border: 1px solid rgba(33, 150, 243, 0.5);
+  color: #2196F3;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.refresh-btn:hover {
+  background: rgba(33, 150, 243, 0.3);
+}
+
+.last-updated {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Scrollbar */
+.ai-predictions-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ai-predictions-panel::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.ai-predictions-panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.ai-predictions-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
