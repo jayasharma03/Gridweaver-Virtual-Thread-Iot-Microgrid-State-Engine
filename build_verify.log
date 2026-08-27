@@ -1,0 +1,11 @@
+Exception calling "DownloadFile" with "2" argument(s): "An exception occurred 
+during a WebClient request."
+At line:1 char:282
++ ... pe]::Tls12; $webclient.DownloadFile('https://repo.maven.apache.org/ma ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : WebException
+ 
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+Error: Could not find or load main class org.apache.maven.wrapper.MavenWrapperMain
+Caused by: java.lang.ClassNotFoundException: org.apache.maven.wrapper.MavenWrapperMain
