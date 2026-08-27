@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: gridweaver-backend
+  
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: gridweaver-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+gridweaver:
+  virtual-threads:
+    enabled: true
+    max-connections: 100000
+  state-machine:
+    grid-load-threshold: 80
+    battery-discharge-threshold: 70
+  kafka:
+    enabled: false  # Set to true to enable Kafka integration
+    topics:
+      ingestion: iot-telemetry
+      state-transitions: state-transitions
